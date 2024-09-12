@@ -1,0 +1,24 @@
+meta {
+  name: Poll User 1
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/polls/user1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "question": "What's your favorite color?",
+      "publishedAt": "2024-09-05T12:00:00Z",
+      "validUntil": "2024-09-06T12:00:00Z",
+      "voteOptions": [
+          { "caption": "Red", "presentationOrder": 1 },
+          { "caption": "Blue", "presentationOrder": 2 }
+      ]
+  }
+  
+}
